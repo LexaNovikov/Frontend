@@ -18,7 +18,7 @@ export const isResponseOk = (response) => {
 const normalizeDataObject = (obj) => {
   let str = JSON.stringify(obj)
 
-  str = str.replace('_id', 'id');
+  str = str.replaceAll('_id', 'id');
     const newObj = JSON.parse(str)
     const result ={...newObj, category: newObj.categories}
     return result;
